@@ -1,0 +1,283 @@
+/* Helvetica Neue Normal */
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./assets/fonts/Helvetica-Neue.eot");
+  src: url("./assets/fonts/Helvetica-Neue.eot") format("embedded-opentype"),
+    url("./assets/fonts/Helvetica-Neue.woff") format("woff"),
+    url("./assets/fonts/Helvetica-Neue.woff2") format("woff2"),
+    url("./assets/fonts/Helvetica-Neue.ttf") format("turetype"),
+    url("./assets/fonts/Helvetica-Neue.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Helvetica Neue Bold */
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./assets/fonts/Helvetica-Neue-Bold.eot");
+  src: url("./assets/fonts/Helvetica-Neue-Bold.eot") format("embedded-opentype"),
+    url("./assets/fonts/Helvetica-Neue-Bold.woff") format("woff"),
+    url("./assets/fonts/Helvetica-Neue-Bold.woff2") format("woff2"),
+    url("./assets/fonts/Helvetica-Neue-Bold.ttf") format("turetype"),
+    url("./assets/fonts/Helvetica-Neue-Bold.svg") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Helvetica Neue Medium */
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./assets/fonts/Helvetica-Neue-Medium.eot");
+  src: url("./assets/fonts/Helvetica-Neue-Medium.eot") format("embedded-opentype"),
+    url("./assets/fonts/Helvetica-Neue-Medium.woff") format("woff"),
+    url("./assets/fonts/Helvetica-Neue-Medium.woff2") format("woff2"),
+    url("./assets/fonts/Helvetica-Neue-Medium.ttf") format("turetype"),
+    url("./assets/fonts/Helvetica-Neue-Medium.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Helvetica Neue Light */
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("./assets/fonts/Helvetica-Neue-Light.eot");
+  src: url("./assets/fonts/Helvetica-Neue-Light.eot") format("embedded-opentype"),
+    url("/.assets/fonts/Helvetica-Neue-Light.woff") format("woff"),
+    url("./assets/fonts/Helvetica-Neue-Light.woff2") format("woff2"),
+    url("./assets/fonts/Helvetica-Neue-Light.ttf") format("turetype"),
+    url("./assets/fonts/Helvetica-Neue-Light.svg") format("svg");
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* Kono Regular */
+@font-face {
+  font-family: "Kono";
+  src: url("./assets/fonts/Kano-regular-Regular.eot");
+  src: url("./assets/fonts/Kano-regular-Regular.eot") format("embedded-opentype"),
+    url("./assets/fonts/Kano-regular-Regular.woff") format("woff"),
+    url("./assets/fonts/Kano-regular-Regular.woff2") format("woff2"),
+    url("./assets/fonts/Kano-regular-Regular.ttf") format("turetype"),
+    url("./assets/fonts/Kano-regular-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  color: #333232;
+  line-height: 1.5;
+  font-family: "Helvetica Neue", sans-serif, system-ui, Tahoma;
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* tag specific */
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+/* global css */
+.f-row {
+  display: flex;
+  flex-direction: row;
+}
+.f-col {
+  display: flex;
+  flex-direction: column;
+}
+.j-center {
+  justify-content: center;
+}
+.j-between {
+  justify-content: space-between;
+}
+.a-center {
+  align-items: center;
+}
+
+/* scrollbar hidden */
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.navbar {
+  /* margin: 10px 0px; */
+  padding: 1rem 4rem;
+}
+.navbar .logo img {
+  height: 80px;
+  width: auto;
+}
+.nav-list {
+  gap: 2.5rem;
+}
+.nav-list .list-item a {
+  font-weight: bold;
+  color: #333232;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.nav-list .list-item:last-of-type a {
+  color: #ffffff;
+  background-color: #0076ff;
+  padding: 1rem 2rem;
+  border-radius: 0.6rem;
+}
+.container {
+  height: auto;
+  min-height: 500px;
+  width: 100vw;
+  position: relative;
+}
+.container img {
+  height: auto;
+  width: 100vw;
+  object-fit: cover;
+}
+.container .banner-heading {
+  position: absolute;
+  top: 4rem;
+  color: #ffffff;
+  z-index: 1;
+}
+.top-banner .banner-heading{
+  left: 4rem;
+  width: 40rem;
+}
+
+.top-banner .banner-heading p {
+  font-size: 1.3rem;
+}
+.top-banner .banner-heading h1 {
+  font-size: 2.9rem;
+}
+.top-banner .info {
+  position: absolute;
+  bottom: 4rem;
+  right: 2rem;
+  width: 40rem;
+  color: #ffffff;
+  z-index: 2;
+  text-align: right;
+}
+.top-banner .info > div {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+.top-banner .info > p {
+  font-weight: normal;
+  font-size: 1.3rem;
+}
+.main-section {
+  height: auto;
+  padding: 3rem 4rem;
+  gap: 4rem;
+}
+.main-section .left {
+  width: 65%;
+  min-width: 400px;
+}
+.main-section .left div:first-child {
+  font-weight: 500;
+  color: #0076ff;
+  font-size: 1.3rem;
+}
+.main-section .left h2 {
+  font-size: 2.4rem;
+}
+.main-section .section-para {
+  padding: 10px 0px;
+}
+.main-section .section-para p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.main-section .section-para p:last-child {
+  margin-bottom: 0;
+}
+.main-section .section-para h5 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.main-section .right {
+  width: 30%;
+  min-width: 290px;
+  gap: 5rem;
+}
+.main-section .right .card {
+  background-color: #fafafc;
+  padding: 5rem 2.5rem;
+  border-radius: 0.6rem;
+  box-shadow: 0px 3px 6px #00000029;
+}
+.main-section .right .card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+.main-section .card ul li{
+  list-style: inside;
+}
+.main-section .card ul li::marker{
+    color: #0076ff;
+    font-size: 1.2rem;
+}
+.main-section a{
+  color: #ffffff;
+  padding: 1rem 3rem;
+  background-color: #0076ff;
+  border-radius: 0.6rem;
+  font-weight: bold;
+}
+.bottom-banner{
+  margin-bottom: 3rem;
+}
+.bottom-banner .banner-heading{
+  right: 4rem;
+  width: 45%;
+}
+.bottom-banner .banner-heading h2{
+  font-size: 2.5rem;
+  line-height: 1.2;
+  padding-bottom: 15px;
+}
+.bottom-banner .banner-heading p{
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.bottom-banner .banner-heading p:last-child {
+  margin-bottom: 0;
+}
+
+/* footer  */
+.footer{
+  gap: 1rem;
+  color: #ffffff;
+  background-color: #0076ff;
+  padding: 3rem;
+}
+.footer img{
+  height: 90px;
+  width: auto;
+}
+.footer p{
+  font-family: "Kono";
+  font-weight: 200;
+  font-size: 1.2rem;
+}
