@@ -93,6 +93,7 @@ ul {
   padding: 0.2rem 6rem;
   color: #000000;
   background-color: #ffffff;
+  flex-wrap: wrap;
 }
 .navbar ul {
   gap: 2rem;
@@ -170,6 +171,7 @@ ul {
   font-size: 1rem;
   border-radius: 1.2rem;
   color: white;
+  flex-wrap: nowrap ;
 }
 .navbar svg {
   height: 17px;
@@ -213,8 +215,12 @@ ul {
   font-family: serif;
   font-size: 2rem;
 }
+.main{
+  padding: 2rem;
+}
 .container {
-  padding: 7rem 20rem;
+  max-width: 900px;
+  margin: auto;
 }
 .container .con-bar {
   border-bottom: 1px solid #e7e7e7;
