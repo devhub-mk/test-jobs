@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: none;
+}
+body {
+  background-color: rgb(76, 76, 76);
+  color: white;
+  font-family: sans-serif;
+  margin: 0;
+  font-size: 1.2rem;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.j-between {
+  justify-content: space-between;
+}
+
+.a-center {
+  align-items: center;
+}
+.navbar {
+  height: 80px;
+  margin: 0px 80px;
+}
