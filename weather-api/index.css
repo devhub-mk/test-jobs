@@ -1,14 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
-  box-sizing: none;
+  box-sizing: border-box;
 }
 body {
-  background-color: rgb(76, 76, 76);
-  color: white;
-  font-family: sans-serif;
+  background-color: #1B2430;
+  color: #ffffff;
+  font-family: 'Jost', sans-serif;
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+button,
+input,
+input::placeholder{
+  font-family: 'Jost', sans-serif;
 }
 .flex-row {
   display: flex;
@@ -21,11 +27,179 @@ body {
 .j-between {
   justify-content: space-between;
 }
+.j-center{
+  justify-content: center;
+}
 
 .a-center {
   align-items: center;
 }
 .navbar {
   height: 80px;
-  margin: 0px 80px;
+  padding: 0px 4rem;
+}
+.navbar .Search{
+  margin: 20px;
+  gap: 10px;
+}
+.navbar input{
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: transparent;
+  outline: none;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+}
+.navbar input::placeholder{
+  font-size: 1rem;
+  color: #ffffff;
+}
+.navbar .btn-search{
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  background-color: rgb(0, 163, 0);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.main{
+  position: relative;
+  min-height: 90vh;
+  padding: 1rem;
+  width: 100vw;
+}
+.loader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+}
+.loader .circle{
+  display: block;
+  height: 100px;
+  width: 100px;
+  border: 12px solid #39414b;
+  border-right-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 1s ease infinite;
+}
+.container{
+  display: none;
+  margin: 1rem 2rem;
+}
+.location{
+  gap: 2rem
+}
+.location #name{
+  font-size: 1.6rem;
+}
+.location  .locality{
+  padding-left: 2rem;
+  border-left: 2px solid #D6D5A8;
+}
+.data-container{
+  max-width: 900px;
+  margin: auto;
+  margin-top: 3rem;
+}
+.data-container .condition,
+.data-container .temp,
+.data-container .wind{
+  width: 200px;
+}
+
+.condition img{
+  height: 60px;
+  width: auto;
+}
+.condition p{
+  font-size: 1.2rem;
+}
+.data-container .temp,
+.data-container .wind
+{
+  text-align: center;
+}
+.data-container .temp h4{
+  font-size: 2rem;
+}
+.w_forecast{
+  display: none;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+.w_forecast .card{
+  border: 2px solid #39414b;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 3rem;
+}
+.w_forecast .card h3{
+  text-align: center;
+  background-color: #39414b;
+  padding: 0.5rem 0;
+}
+.w_forecast .card .card-item{
+  flex-wrap: nowrap;
+}
+.w_forecast .card .for-col{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 1rem 0;
+  width: 250px;
+  min-width: 230px;
+}
+.w_forecast .card .for_condition{
+  min-width: 130px;
+  max-width: 130px;
+}
+.w_forecast .card .for_condition img{
+  height: 60px;
+  width: auto;
+}
+.w_forecast .card .for_condition p{
+  font-size: 1.2rem;
+}
+.w_forecast .card .for-temp,
+.w_forecast .card .astro_day{
+  max-width: 200px;
+  min-width: 200px;
+}
+
+@keyframes spin{
+  100%{
+    transform: rotate(360deg);
+
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar{
+    flex-direction: column;
+  }
+  .navbar h1{
+    font-size: 3rem;
+  }
+  .container{
+    margin-top: 6rem;
+  }
+  .data-container{
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .card{
+    margin: auto;
+    width: 90%;
+  }
+  .card .card-item{
+    flex-direction: column;
+  }
 }

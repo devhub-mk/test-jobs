@@ -4,22 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather API</title>
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <h1>Weather API</h1>
-      <div class="Search">
-        <input type="text" placeholder="Enter your city" />
-        <button class="btn-search">Search</button>
+    <nav class="navbar flex-row j-between a-center">
+      <h1>Weather</h1>
+      <div class="Search flex-row">
+        <input type="text" id="city" placeholder="Enter location" />
+        <button class="btn-search" id="btn_search" autocomplete="off">
+          Search
+        </button>
       </div>
     </nav>
     <div class="main">
-      <div class="container">
-        Working On
+      <div class="loader" id="loader">
+        <div class="circle"></div>
+      </div>
+      <div class="container" id="container">
+        <div class="location flex-row a-center j-center">
+          <h2 id="l_name"></h2>
+          <div class="locality">
+            <p id="region"></p>
+            <p id="country"></p>
+          </div>
+        </div>
+        <div class="current-weather">
+          <div class="data-container flex-row j-between a-center">
+              <div class="condition flex-col j-center a-center">
+                <img src="" alt="icon" id="icon">
+                <p id="w_text"></p>
+              </div>
+              <div class="temp">
+                <h4><span id="temp_c"></span>℃</h4>
+                <p>Feels Like: <span id="feelslike_c"></span>℃</p>
+                <p>Cloud Cover: <span id="cloud"></span>%</p>
+                <p>Humidity: <span id="humidity"></span>%</p>
+              </div>
+              <div class="wind">
+                <p>Wind Speed: <span id="wind_kph"></span>km/h</p>
+                <p>Wind Degree: <span id="wind_degree"></span>&deg;</p>
+                <p>Wind Direction: <span id="wind_dir"></span></p>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="w_forecast" id="w_forecast">
       </div>
     </div>
-    <footer class="footer">
-        
-    </footer>
+    <footer class="footer"></footer>
+    <script src="./index.js"></script>
   </body>
 </html>
