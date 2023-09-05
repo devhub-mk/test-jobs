@@ -1,0 +1,12 @@
+{
+  "name": "small-node-program",
+  "version": "1.0.0",
+  "description": "\"small program written in nodejs\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fun": "node ./index.js"
+  },
+  "author": "Mahender",
+  "license": "ISC"
+}
