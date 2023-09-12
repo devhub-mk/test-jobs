@@ -1,0 +1,133 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    height: 70px;
+    padding: 0px 20px;
+    color: black;
+    background-color: #ffffff;
+}
+
+.navbar .left img {
+    height: 40px;
+    width: 40px;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar .left {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar .left input {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #050505;
+    background-color: #F0F2F5;
+    border: none;
+    border-radius: 20px;
+    width: 220px;
+    outline: none;
+}
+
+input::placeholder {
+    color: #65676B;
+}
+
+.navbar .center {
+    width: 1000px;
+}
+
+.navbar .center ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: auto;
+    height: 70px;
+}
+
+.navbar .center ul li {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .center ul li .tabs {
+    padding: 20px 50px;
+}
+
+.navbar .center ul li:first-of-type {
+    border-bottom: 3px solid #1877f2;
+}
+
+.navbar .center ul li a img {
+    height: 30px;
+    width: 30px;
+}
+
+.navbar .right {
+    width: max-content;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.profile p {
+    padding-right: 10px;
+}
+
+.profile .profile-img {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile .profile-img img {
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+}
+
+.profile .profile-img img {
+    object-fit: cover;
+}
+
+.navbar .right ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.navbar .right ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: #CCCCCC;
+}
+
+.navbar .right svg {
+    fill: #000000;
+}

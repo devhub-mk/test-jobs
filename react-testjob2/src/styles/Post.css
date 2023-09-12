@@ -1,0 +1,63 @@
+.post{
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px #0000008f;
+}
+.post .input-box{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.post .input-box .profile-img{
+    height: 35px;
+    width: 35px;
+}
+.post .input-box .profile-img img{
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.post .input-box input{
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #050505;
+    background-color: #F0F2F5;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+    outline: none;
+}
+.post svg{
+    height: 30px;
+    width: 30px;
+}
+.post .attachments .attach-type:first-of-type svg{
+    fill: #ff4ac3;
+}
+.post .attachments .attach-type:nth-child(2) svg{
+    fill: #00c427;
+}
+.post .attachments .attach-type:last-of-type svg{
+    fill: #ffea08;
+}
+.post .attachments{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 60px;
+    margin-bottom: 0;
+}
+.post .attachments .attach-type{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+.post .attachments .attach-type p{
+    font-size: 16px;
+}

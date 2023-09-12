@@ -1,0 +1,49 @@
+.left-sidebar{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.left-sidebar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+.left-sidebar svg{
+    height: 30px;
+    width: 30px;
+    fill: #1877f2;
+}
+.left-sidebar ul li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.left-sidebar ul li h3{
+    font-size: 16px;
+    font-weight: 700;
+}
+.left-sidebar .sd-title{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.left-sidebar ul li p{
+    font-size: 14px;
+    color: #1877f2;
+}
+.left-sidebar ul li p::before{
+    content: "";
+    display: inline-block;
+    margin-right: 7px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: #1877f2;
+    vertical-align: middle;
+    margin-bottom: 3px;
+}
+.left-sidebar .profile{
+    gap: 15px;
+}

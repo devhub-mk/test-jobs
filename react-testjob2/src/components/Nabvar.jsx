@@ -1,12 +1,14 @@
 import React from 'react';
+import "../styles/Navbar.css";
+
 import Logo from './Logo';
 import Menu from './Menu';
 import InputSearch from './InputSearch';
 
 function Nabvar() {
     const menus = [
-        { name: "Home", link: "/home", imgSrc: '/images/icons/house-solid.svg' },
-        { name: "Video", link: "/videos", imgSrc: '/images/icons/video-solid.svg' },
+        { name: "Home", link: "/home", imgSrc: '/images/icons/house-solid.svg',},
+        { name: "Video", link: "/videos", imgSrc: '/images/icons/video-solid.svg', notifi: 9},
         { name: "Store", link: "/store", imgSrc: '/images/icons/store-solid.svg' },
         { name: "Group", link: "/group", imgSrc: '/images/icons/user-group-solid.svg' },
         { name: "Unknown", link: "/unknown", imgSrc: '/images/icons/video-solid.svg' },
@@ -24,7 +26,7 @@ function Nabvar() {
             <div className="right">
                 <div className="profile">
                     <div className="profile-img">
-                        <img src="/images/profile.jpg" alt="profile photo" />
+                        <img src="/images/profile.jpg" alt="profile" />
                     </div>
                     <p>Rohan</p>
                 </div>

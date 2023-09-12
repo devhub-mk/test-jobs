@@ -1,5 +1,6 @@
-import React from 'react'
-import FeedItems from './FeedItems'
+import React from 'react';
+import FeedItems from './FeedItems';
+import "../styles/Feed.css";
 
 const Feed = () => {
   return (

@@ -1,0 +1,70 @@
+.feed-container{
+    margin-top: 20px;
+    width: 100%;
+}
+.feed-container .feed{
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px #0000008f;
+}
+.feed-container .feed-header {
+    height: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.feed-container .feed-header .profile{
+    height: 50px;
+    width: 50px;
+}
+.feed-container .feed-header .profile img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.feed-container .feed-header .profile-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.feed-container .feed-header .feed-info{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.feed-container .feed-header .feed-info ul{
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    align-items: center;
+}
+.feed-container .feed-header .feed-info h3{
+    font-size: 16px;
+    font-weight: 700;
+}
+.feed-container .feed-header .feed-info ul li{
+    list-style-type: disc;
+}
+.feed-container .feed-header .feed-info ul li:first-of-type{
+    list-style: none;
+}
+.feed-container .feed-header .feed-info svg{
+    vertical-align: middle;
+}
+.feed-container .feed-content{
+    height: 100px;
+    border-radius: 10px;
+}
+.feed-container .feed-content img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.feed .feed-content p{
+    margin: 0px 20px 10px;
+    font-size: 16px;
+}

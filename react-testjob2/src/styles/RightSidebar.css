@@ -1,0 +1,40 @@
+.right-sidebar{
+    width: 300px;
+}
+.sponser-box{
+    border-bottom: 2px solid #b3b3b3;
+}
+.sponser h3{
+    font-size: 16px;
+    font-weight: 700;
+}
+.sponser .sponser-box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 0;
+}
+.sponser .sponser-box .sponser-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.sponser .sponser-box .sponser-item img{
+    height: auto;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.sponser-box .sponser-item h4{
+    font-size: 15px;
+    font-weight: 700;
+}
+.sponser-box .sponser-item p{
+    font-size: 15px;
+}
+.sponser-item .desc{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
