@@ -4,4 +4,5 @@ import Success from "./Success";
 import Light from "./Light";
 import Warning from "./Warning";
 import Dark from "./Dark";
-export {Primary, Secondary, Success, Light, Warning, Dark};
+
+export { Primary, Secondary, Success, Light, Warning, Dark };
