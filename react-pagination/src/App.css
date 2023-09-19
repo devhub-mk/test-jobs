@@ -1,0 +1,25 @@
+.container{
+    margin: 2rem 2rem;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    width: 1300px;
+    gap: 2rem;
+    row-gap: 2rem;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+.flex .comments{
+    width: 300px;
+    border: 1px solid black;
+    padding: 10px;
+}
+.flex .comments .user-info{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.flex .comments .user-info:first-child{
+    color: rgb(215, 0, 0);
+}

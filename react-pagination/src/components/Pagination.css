@@ -1,0 +1,54 @@
+.pagination-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 1000px;
+  height: 50px;
+  gap: 0.5rem;
+  margin: auto;
+}
+.pagination-container li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: rgb(231, 231, 231);
+  font-size: 20px;
+  color: rgb(90, 90, 90);
+  font-weight: 600;
+  cursor: pointer;
+}
+.pagination-container .dots {
+  background-color: transparent;
+  font-size: 30px;
+  color: rgb(178, 178, 178);
+  cursor: default;
+}
+.pagination-container .active {
+  background-color: rgb(6, 139, 255);
+  color: #ffffff;
+}
+.pagination-container .arrow::before {
+  position: relative;
+  content: "";
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 0.13em solid rgb(90, 90, 90);
+  border-top: 0.13em solid rgb(90, 90, 90);
+}
+.pagination-container .left {
+    transform: rotate(-135deg) translate(-50%);
+    margin-right: 5px;
+}
+.pagination-container .right {
+    transform: rotate(45deg);
+}
+.pagination-container .disabled{
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+}
