@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Not Found</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+          padding: 2rem;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px;
+            border: 1px solid rgb(200, 200, 200);
+            border-radius: 4px;
+            width: 100%;
+        }
+        .active{
+            border: 1px solid #000000;
+        }
+        li{
+            list-style: none;
+            width: auto;
+        }
+        .flex{
+            display: flex;
+        }
+        .flex-col{
+            flex-direction: column;
+        }
+        nav{
+            width: 23%;
+        }
+        nav ul{
+            gap: 2rem;
+        }
+        h1{
+            font-size: 20px;
+            font-weight: 600;
+            width: 100%;
+        }
+        .container{
+            width: 75%;
+        }
+    </style>
+  </head>
+  <body>
+    <main class="flex">
+      <nav>
+        <ul class="flex flex-col">
+          <li><a class="" href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a clas="" href="/term-and-conditions">Terms and conditions</a></li>
+        </ul>
+      </nav>
+      <div class="container">
+        <h1>Error 404: Not Found</h1>
+      </div>
+    </main>
+  </body>
+</html>
