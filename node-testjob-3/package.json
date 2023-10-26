@@ -1,0 +1,17 @@
+{
+  "type": "module",
+  "name": "testjob-3",
+  "version": "1.0.0",
+  "description": "this is nodejs testjob",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mahender Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "formidable": "^3.5.1",
+    "mongodb": "^6.2.0"
+  }
+}

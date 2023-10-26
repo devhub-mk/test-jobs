@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NODE | TESTJOB 3</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #e8e8e8;
+      }
+
+      .container {
+        min-width: 550px;
+        padding: 40px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        min-height: 415px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      .flex-col {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 25px;
+      }
+
+      .flex-row {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+        justify-content: space-between;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="number"] {
+        border: 1px solid #e8e8e8;
+        border-radius: 5px;
+        padding: 7px 10px;
+        outline: none;
+      }
+
+      .item-small {
+        width: 100px;
+      }
+
+      button[type="submit"] {
+        padding: 10px 25px;
+        border: none;
+        background-color: rgb(0, 102, 255);
+        color: white;
+        margin-top: 25px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>User Data Collector</h1>
+      <form method="post" enctype="multipart/form-data" id="userForm">
+        <div class="flex-row">
+          <div class="flex-col">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="First Name"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="flex-col">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Last Name"
+              autocomplete="off"
+              required
+            />
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-col item-small">
+            <label for="age">Age</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              placeholder="Age"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="flex-col item-small">
+            <label for="gender"> Gender</label>
+            <input
+              type="text"
+              id="gender"
+              name="gender"
+              autocomplete="off"
+              placeholder="Gender"
+              required
+            />
+          </div>
+          <div class="flex-col item-small">
+            <label for="city">City</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              placeholder="City"
+              autocomplete="off"
+              required
+            />
+          </div>
+        </div>
+        <div class="flex-row">
+          <div class="flex-col">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              placeholder="gender"
+              autocomplete="off"
+              required
+            />
+          </div>
+          <div class="flex-col">
+            <label for="avatar">Upload Picture</label>
+            <input
+              type="file"
+              id="avatar"
+              name="avatar"
+              accept=".jpeg, .jpg, .png, image/jpeg, image/png"
+              required
+            />
+          </div>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <script>
+      document
+        .getElementById("userForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const form = document.querySelector("#userForm");
+          const formData = new FormData(form);
+
+          const firstName = formData.get("firstName");
+          const lastName = formData.get("lastName");
+          const email = formData.get("email");
+          const gender = formData.get("gender").toLowerCase();
+          const age = parseInt(formData.get("age"));
+          const city = formData.get("city");
+          const avatar = formData.get("avatar");
+
+          if (!firstName || !email || !gender || !age || !city || !avatar) {
+            alert("All fields are required");
+            return null;
+          }
+          if (firstName.length < 2) {
+            alert("Please enter valid name");
+            return null;
+          }
+          if (gender !== "male" && gender !== "female" && gender !== "other") {
+            alert("Gender should be Male or Female or Other");
+            return null;
+          }
+          if (age < 0 || age > 130) {
+            alert("Please enter valid age");
+            return null;
+          }
+          fetch("/user-data-collector", {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => {
+              if (response.ok) {
+                return response.json();
+              } else {
+                throw new Error("Request failed.");
+              }
+            })
+            .then((data) => {
+              form.reset();
+              alert(data.message);
+            })
+            .catch((error) => {
+              console.error(error);
+            });
+        });
+    </script>
+  </body>
+</html>
