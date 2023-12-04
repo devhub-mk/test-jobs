@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 4rem;
+    margin: 2rem;
+    font-size: 1.1rem;
+}
+form{
+    margin: auto;
+    width: min-content;
+}
+.flex{
+    display: flex;
+    gap: 4rem;
+    margin-bottom: 1.5rem;
+}
+input[type=text], input[type=email]{
+    padding: 10px 15px;
+    font-size: 1rem;
+    outline: none;
+    border: 2px solid black;
+}
+select{
+    padding: 10px 15px;
+    font-size: 1rem;
+    outline: none;
+    border: 2px solid black;
+}
+select option{
+    font-size: 1.1rem;
+    padding: 0.2rem;
+}
+#address p{
+    margin-bottom: 5px;
+}
+button{
+    font-size: 1rem;
+    padding: 0.2rem 0.7rem;
+    margin: 0.2rem 0;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NODE | TESTJOB 4</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <form id="userForm" enctype="multipart/form-data">
+      <div class="flex">
+        <div>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="First Name"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <div>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Last Name"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+      <div class="flex">
+        <div>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            autocomplete="off"
+            required
+          />
+        </div>
+
+        <div>
+          <input type="radio" id="male" name="gender" value="male" required/>
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender" value="female" required/>
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender" value="other" required/>
+          <label for="other">Other</label>
+        </div>
+      </div>
+      <div class="flex">
+        <div>
+          <select name="country" id="country">
+            <option value="">Select Country</option>
+          </select>
+        </div>
+      </div>
+      <div id="address">
+        <p>Address</p>
+        <div class="flex">
+          <input
+            type="text"
+            id="city"
+            name="city"
+            placeholder="City"
+            autocomplete="off"
+            required
+          />
+          <input
+            type="text"
+            id="state"
+            name="state"
+            placeholder="State"
+            autocomplete="off"
+            required
+          />
+          <input
+            type="text"
+            id="zip"
+            name="zip"
+            placeholder="Zip"
+            autocomplete="off"
+            required
+          />
+        </div>
+      </div>
+      <div>
+        <input type="file" name="avatar" id="avatar" required/>
+      </div>
+      <div class="flex">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
